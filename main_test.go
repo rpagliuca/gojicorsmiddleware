@@ -2,13 +2,13 @@ package gojicorsmiddleware_test
 
 import (
 	"fmt"
-	"testing"
-	"net/http"
-	"net/http/httptest"
 	"github.com/rpagliuca/gojicorsmiddleware"
-	"io/ioutil"
 	"goji.io"
 	"goji.io/pat"
+	"io/ioutil"
+	"net/http"
+	"net/http/httptest"
+	"testing"
 )
 
 func Test(t *testing.T) {
@@ -21,8 +21,8 @@ func Test(t *testing.T) {
 	server := httptest.NewServer(mux)
 	client := server.Client()
 
-    req, _ := http.NewRequest("GET", server.URL + "/my-resource", nil)
-    resp, _ := client.Do(req)
+	req, _ := http.NewRequest("GET", server.URL+"/my-resource", nil)
+	resp, _ := client.Do(req)
 
 	if resp.Header.Get("Access-Control-Allow-Headers") != "*" {
 		t.Error("Access-Control-Allow-Headers not defined correctly")
