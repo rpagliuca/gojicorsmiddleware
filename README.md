@@ -1,7 +1,14 @@
 # Usage
 
-import "github.com/rpagliuca/gojicorsmiddleware"
+## 1) Import package
 
-mux := goji.NewMux()
+`import "github.com/rpagliuca/gojicorsmiddleware"`
 
-mux.Use(gojicorsmiddleware.CorsMiddlewareHandler)
+## 2) Enable middleware on Goji mux
+
+`// mux := goji.NewMux()`
+`mux.Use(gojicorsmiddleware.CorsMiddlewareHandler)`
+
+# Example
+
+Check `main_test.go` for full example.
