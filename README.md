@@ -7,6 +7,7 @@
 ## 2) Enable middleware on Goji mux
 
 `// mux := goji.NewMux()`
+
 `mux.Use(gojicorsmiddleware.CorsMiddlewareHandler)`
 
 # Example
